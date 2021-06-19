@@ -1,28 +1,32 @@
 @import '../../assets/css/_variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
 
 .navbar {
     width: 100%;
     position: fixed;
     bottom: 0;
-    height: 48px;
+    height: 60px;
     display: flex;
-
+    background-color: #43286e;
     & > button {
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
         width: 100%;
-        text-align: center;
-        border: 1px solid $colorSecondary;
-        background-color: $colorSurface;
-        color: $colorSecondary;
-        outline: none !important;
-
-        &:hover {
-            background-color: $colorSecondary;
-            color: $colorOnSecondary;
-        }
-
-        &.selected {
-            background-color: $colorSecondary;
-            color: $colorOnSecondary;
+        border: none;
+        background-color: $colorPrimary;
+        color: #9f82d7;
+        &:hover, &.selected {
+          color: $colorSecondary;
         }
     }
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  & > svg {
+    width: 100%;
+    font-size: 20px;
+  }
 }

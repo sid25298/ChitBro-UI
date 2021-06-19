@@ -4,7 +4,8 @@ import './Header.scss'
 const Header = () => {
     return (
         <div className="header">
-            DeFi Chit
+            <div>ChitBro</div>
+            <button>Connect</button>
         </div>
     )
 }

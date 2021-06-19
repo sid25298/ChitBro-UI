@@ -5,9 +5,37 @@
     position: fixed;
     top: 0;
     height: 48px;
-    background-color: $colorSecondaryVariant;
-    color: $colorOnSecondary;
-    font-size: 24px;
+    color: $colorPrimary;
+    font-size: 28px;
+    font-weight: bold;
     line-height: 48px;
-    padding: 0 16px;
+    margin: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+
+    & > button {
+        align-self: center;
+        border-radius: 20px;
+        padding: 0 12px;
+        height: 30px;
+        margin-right: 32px;
+        background: transparent;
+        border: 0.5px solid  #7f51d1;
+        color: #7f51d1;
+
+        &:hover {
+            cursor: pointer;
+            color: #4c249f;
+            border-color: #4c249f;
+        }
+
+        &:active {
+            outline: none;
+            border: none;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
 }
