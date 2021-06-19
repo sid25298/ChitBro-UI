@@ -1,6 +1,6 @@
 @import '../../../../assets/css/_variables.scss';
 
-.card {
+.dashboard-card {
     border-radius: 8px;
     box-shadow: 0 0 4px $colorSecondary;
     background-color: #fff;
@@ -12,7 +12,6 @@
         display: flex;
         justify-content: space-between;
     }
-
     & > div:nth-child(2) {
         display: grid;
         grid-template-columns: auto auto;
@@ -24,7 +23,7 @@
     }
 }
 
-.card .heading {
+.dashboard-card .heading {
     font-weight: bold;
     font-size: 1.2em;
 }

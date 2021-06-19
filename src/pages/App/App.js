@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Header from '../../components/Header/Header';
 import Navbar from '../../components/Navbar/Navbar';
 import Dashboard from './Dashboard/Dashboard';
 import Chits from './Chits/Chits';
@@ -26,13 +27,14 @@ const App = () => {
 
   return (
     <div>
+      <Header />
       {/* <button onClick={() => HandleConnect()}>
         Connect
       </button> */}
       {tab === "dashboard" && <Dashboard />}
       {tab === "chits" && <Chits />}
       {tab === "auction" && <Auction />}
-      <Navbar setTab={setTab} />
+      <Navbar setTab={setTab} tab={tab} />
     </div>
   )
 }

@@ -1,17 +1,17 @@
 import React from 'react'
 import './Navbar.scss'
 
-const Navbar = ({ setTab }) => {
+const Navbar = ({ tab, setTab }) => {
 
     return (
         <div className="navbar">
-            <button onClick={() => setTab("chits")}>
+            <button className={tab === "chits" && "selected"} onClick={() => setTab("chits")}>
                 Chits
             </button>
-            <button onClick={() => setTab("dashboard")}>
+            <button className={tab === "dashboard" && "selected"} onClick={() => setTab("dashboard")}>
                 Dashboard
             </button>
-            <button onClick={() => setTab("auction")}>
+            <button className={tab === "auction" && "selected"} onClick={() => setTab("auction")}>
                 Auctions
             </button>
         </div>

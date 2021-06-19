@@ -10,14 +10,19 @@
     & > button {
         width: 100%;
         text-align: center;
-        border: 1px solid $colorPrimary;
+        border: 1px solid $colorSecondary;
         background-color: $colorSurface;
-        color: $colorPrimary;
+        color: $colorSecondary;
         outline: none !important;
 
         &:hover {
-            background-color: $colorPrimary;
-            color: $colorOnPrimary;
+            background-color: $colorSecondary;
+            color: $colorOnSecondary;
+        }
+
+        &.selected {
+            background-color: $colorSecondary;
+            color: $colorOnSecondary;
         }
     }
 }

@@ -1,4 +1,5 @@
 @import './assets/css/_variables.scss';
+@import './assets/css/common.scss';
 
 :root {
     font-size: 100%;
@@ -7,6 +8,7 @@
 html,
 body {
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {

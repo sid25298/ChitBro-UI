@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 import { RESET_APP_STATE } from '../types';
 import chitsReducer from './chitsReducer';
+import myChitsReducer from './myChitsReducer';
 
 const appReducer = combineReducers({
-    chits: chitsReducer
+    chits: chitsReducer,
+    myChits: myChitsReducer
 })
 
 // eslint-disable-next-line import/no-anonymous-default-export

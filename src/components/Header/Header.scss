@@ -1,0 +1,13 @@
+@import '../../assets/css/variables';
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 48px;
+    background-color: $colorSecondaryVariant;
+    color: $colorOnSecondary;
+    font-size: 24px;
+    line-height: 48px;
+    padding: 0 16px;
+}
