@@ -1,4 +1,4 @@
-@import '../../assets/css/variables';
+@import '../../../assets/css/_variables.scss';
 
 .header {
     width: 100%;
@@ -20,7 +20,7 @@
         height: 30px;
         margin-right: 32px;
         background: transparent;
-        border: 0.5px solid  #7f51d1;
+        border: 0.5px solid #7f51d1;
         color: #7f51d1;
 
         &:hover {

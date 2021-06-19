@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import Header from '../../components/Header/Header';
+import { useDispatch } from 'react-redux';
+import Header from './Header/Header';
 import Navbar from '../../components/Navbar/Navbar';
 import Dashboard from './Dashboard/Dashboard';
 import Chits from './Chits/Chits';
 import Auction from './Auction/Auction';
 import { Web3Connect } from '../../services';
-import './App.scss';
 import { CONTRACTS_SUCCESS } from '../../redux/types';
-import { useDispatch } from 'react-redux';
+import './App.scss';
+// import { cssTransition, toast } from 'react-toastify';
+// import { TOAST_CONFIG } from '../../config/ui';
 
 const App = () => {
 
@@ -26,6 +28,14 @@ const App = () => {
   }
 
   useEffect(() => {
+    // toast.configure({
+    //   ...TOAST_CONFIG,
+    //   transition: cssTransition({
+    //     enter: 'toast-slidein',
+    //     exit: 'toast-slideout',
+    //     duration: [500, 750]
+    //   })
+    // })
     HandleConnect();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

@@ -9,6 +9,7 @@ const Chits = () => {
 
     const dispatch = useDispatch();
     const chits = useSelector(state => state.chits.data);
+    const account = useSelector(state => state.contracts.account);
 
     useEffect(() => {
         const handleGetAllChits = async () => {
@@ -19,7 +20,7 @@ const Chits = () => {
 
     return (
         <div className="page-wrap">
-            {chits.length > 0 && chits.map((c, i) => <Card key={c.id} data={c} />)}
+            {chits.length > 0 && chits.map((c, i) => <Card key={c.id} data={c} account={account} />)}
         </div>
     )
 }
