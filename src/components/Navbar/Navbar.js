@@ -1,9 +1,19 @@
 import React from 'react'
+import './Navbar.scss'
 
-const Navbar = () => {
+const Navbar = ({ setTab }) => {
+
     return (
-        <div>
-            Navbar
+        <div className="navbar">
+            <button onClick={() => setTab("chits")}>
+                Chits
+            </button>
+            <button onClick={() => setTab("dashboard")}>
+                Dashboard
+            </button>
+            <button onClick={() => setTab("auction")}>
+                Auctions
+            </button>
         </div>
     )
 }

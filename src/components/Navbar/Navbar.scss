@@ -1,0 +1,23 @@
+@import '../../assets/css/common.scss';
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 48px;
+    display: flex;
+
+    & > button {
+        width: 100%;
+        text-align: center;
+        border: 1px solid $colorPrimary;
+        background-color: $colorSurface;
+        color: $colorPrimary;
+        outline: none !important;
+
+        &:hover {
+            background-color: $colorPrimary;
+            color: $colorOnPrimary;
+        }
+    }
+}

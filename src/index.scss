@@ -1,0 +1,17 @@
+@import './assets/css/common.scss';
+
+:root {
+    font-size: 100%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $colorOnPrimary;
+    background-color: $colorSurface;
+}

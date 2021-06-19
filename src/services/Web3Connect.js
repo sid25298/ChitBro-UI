@@ -11,10 +11,18 @@ const web3Modal = new Web3Modal({
 });
 
 const Web3Connect = async () => {
-    const provider = await web3Modal.connect();
-    const web3 = new Web3(provider);
-    const accounts = await web3.eth.getAccounts();
-    TokenService.setWalletAddress(accounts[0])
+    try {
+        const provider = await web3Modal.connect();
+        const web3 = new Web3(provider);
+        const accounts = await web3.eth.getAccounts();
+        if (accounts[0]) {
+            TokenService.setWalletAddress(accounts[0])
+        }
+    }
+    catch (err) {
+        TokenService.clearAll();
+        throw err;
+    }
 }
 
 export default Web3Connect;
