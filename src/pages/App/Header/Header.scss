@@ -13,6 +13,9 @@
     display: flex;
     justify-content: space-between;
     background: $colorBackground;
+    & > div {
+        align-self: center;
+    }
     & > button {
         align-self: center;
         border-radius: 20px;

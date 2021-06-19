@@ -20,7 +20,7 @@ const Chits = () => {
 
     return (
         <div className="page-wrap">
-            {chits.length > 0 && chits.map((c, i) => <Card key={c.id} data={c} account={account} />)}
+            {chits.length > 0 && chits[0].name!=="" && chits.map((c, i) => <Card key={c.id} data={c} account={account} />)}
         </div>
     )
 }
