@@ -15,7 +15,20 @@ const transformGetAllChitsResponse = (payload) => {
     }))
 }
 
+const transformCreateChitRequest = (account, payload) => {
+    return [account,
+        payload.chitName,
+        Date.parse(new Date()),
+        Date.parse(payload.nextPaymentDate),
+        parseInt(payload.roomCapacity),
+        parseInt(payload.timePeriod),
+        parseInt(payload.poolAmount),
+        parseInt(payload.chitDuration)
+    ];
+}
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-    transformGetAllChitsResponse
+    transformGetAllChitsResponse,
+    transformCreateChitRequest
 }
