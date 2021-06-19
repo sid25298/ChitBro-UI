@@ -9,7 +9,6 @@ const Chits = () => {
 
     const dispatch = useDispatch();
     const chits = useSelector(state => state.chits.data);
-    console.log(chits)
 
     useEffect(() => {
         const handleGetAllChits = async () => {

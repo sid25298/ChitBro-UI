@@ -1,15 +1,19 @@
-import apiList from '../../api/apiList';
+import transformers from '../../utils/transformers';
 import {
     GET_CHITS_REQUEST,
     GET_CHITS_SUCCESS
 } from '../types'
 
 const getAllChits = () => {
-    return async (dispatch) => {
+    return async (dispatch, getState) => {
+        const { contracts: { contract } } = getState();
         try {
-            dispatch({ type: GET_CHITS_REQUEST });
-            const payload = await apiList.getAllChits();
-            dispatch({ type: GET_CHITS_SUCCESS, payload })
+            if (contract) {
+                dispatch({ type: GET_CHITS_REQUEST });
+                const payload = await contract.methods.getAll().call();
+                const formattedResponse = transformers.transformGetAllChitsResponse(payload);
+                dispatch({ type: GET_CHITS_SUCCESS, payload: formattedResponse })
+            }
         }
         catch (err) {
             throw err;
