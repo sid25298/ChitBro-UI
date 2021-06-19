@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import Card from './Card/Card';
 import CreateChit from './CreateChit/CreateChit'
 import getAllChits from '../../../redux/actions/getAllChits';
+import { FaRegSadTear } from 'react-icons/fa'
 import './Chits.scss'
-import { useState } from 'react';
 
 const Chits = () => {
 
@@ -25,7 +25,12 @@ const Chits = () => {
     function renderChits() {
         let filteredChits = chits.filter(chit => chit.name !== "" && chit.name.includes(searchText));
         if (filteredChits.length === 0) {
-            return <div className="no-chits-message">No Chits available. Try creating one?</div>;
+            return (
+                <div className="no-chits-message">
+                    <FaRegSadTear />
+                    <span>No Chits available. Try creating one?</span>
+                </div>
+            );
         }
         return filteredChits.map((c, i) => <Card key={c.id} data={c} account={account} />);
     }
