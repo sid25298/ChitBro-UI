@@ -18,9 +18,20 @@ const Chits = () => {
         handleGetAllChits();
     }, [dispatch])
 
+    function renderChits() {
+        let filteredChits = chits.filter(chit => chit.name !== "");
+        if (filteredChits.length === 0) {
+            return <div className="no-chits-message">No Chits available. Try creating one?</div>;
+        }
+        return filteredChits.map((c, i) => <Card key={c.id} data={c} account={account}/>);
+    }
+
     return (
         <div className="page-wrap">
-            {chits.length > 0 && chits[0].name!=="" && chits.map((c, i) => <Card key={c.id} data={c} account={account} />)}
+            <div className="create-chit-btn" >
+                <button>Create Chit</button>
+            </div>
+            {renderChits()}
         </div>
     )
 }
