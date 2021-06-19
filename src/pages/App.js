@@ -1,11 +1,21 @@
+import React, { useEffect } from 'react'
+import Navbar from '../components/Navbar/Navbar';
+import { Web3Connect } from '../services';
 import './App.css';
 
-function App() {
+const App = () => {
+
+  useEffect(() => {
+
+    setTimeout(Web3Connect.connectFunc(), 5000)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
-    <div className="App">
-      Defi Chit App
+    <div>
+      <Navbar />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
