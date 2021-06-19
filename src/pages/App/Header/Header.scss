@@ -4,15 +4,15 @@
     width: 100%;
     position: fixed;
     top: 0;
-    height: 48px;
+    height: 36px;
     color: $colorPrimary;
     font-size: 28px;
     font-weight: bold;
     line-height: 48px;
-    margin: 12px 16px;
+    padding: 12px 16px;
     display: flex;
     justify-content: space-between;
-
+    background: $colorBackground;
     & > button {
         align-self: center;
         border-radius: 20px;
