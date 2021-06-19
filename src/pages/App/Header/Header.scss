@@ -19,14 +19,18 @@
     & > button {
         font-family: 'Titillium Web', sans-serif;
         align-self: center;
+        width: 30%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         border-radius: 20px;
         padding: 0 12px;
         height: 30px;
         margin-right: 32px;
         background: transparent;
-        border: 0.5px solid #7f51d1;
+        border: 2px solid #7f51d1;
         color: #7f51d1;
-
+        font-weight: 600;
         &:hover {
             cursor: pointer;
             color: #4c249f;

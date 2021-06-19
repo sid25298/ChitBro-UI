@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Card from './Card/Card';
 import getAllChits from '../../../redux/actions/getAllChits';
 import './Chits.scss'
+import {FaRegSadTear} from 'react-icons/fa'
 
 const Chits = () => {
 
@@ -21,7 +22,12 @@ const Chits = () => {
     function renderChits() {
         let filteredChits = chits.filter(chit => chit.name !== "");
         if (filteredChits.length === 0) {
-            return <div className="no-chits-message">No Chits available. Try creating one?</div>;
+            return (
+                <div className="no-chits-message">
+                    <FaRegSadTear/>
+                    <span>No Chits available. Try creating one?</span>
+                </div>
+            );
         }
         return filteredChits.map((c, i) => <Card key={c.id} data={c} account={account}/>);
     }
