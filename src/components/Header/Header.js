@@ -4,7 +4,8 @@ import './Header.scss'
 const Header = () => {
     return (
         <div className="header">
-            ChitBro
+            <div>ChitBro</div>
+            <button>Connect</button>
         </div>
     )
 }

@@ -50,7 +50,20 @@
 .join-btn {
     background: linear-gradient(72deg,#4c249f 28%,#ec47c9 164%);
     color: #ddd;
-    border: none;
+    box-shadow: none;
     border-radius: 4px;
-    padding: 4px 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    &:hover{
+      transform: scale(1.1);
+      transition: transform .2s;
+    }
+}
+
+.input-label {
+  display: flex;
+  &>svg{
+    align-self: center;
+    margin-right: 3px;
+  }
 }
