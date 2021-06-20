@@ -1,8 +1,11 @@
 import React, {useEffect, useState} from 'react';
+import {useDispatch} from 'react-redux';
 import rocketLogo from "../../../../assets/rocketLogo.png";
+import contribute from '../../../../redux/actions/contribute'
 
 const GradientCard = ({data: receivedData}) => {
     const [data, setData] = useState(null)
+    const dispatch = useDispatch();
 
     useEffect(() => {
         setData(receivedData)
@@ -25,7 +28,7 @@ const GradientCard = ({data: receivedData}) => {
                 </div>
                 <div className="payNow-button-container">
                     {/* TODO: Contribute goes here*/}
-                    <button>
+                    <button style={{cursor: 'pointer'}} onClick={() => {dispatch(contribute(+data.id))}}>
                         Pay Now
                     </button>
                 </div>

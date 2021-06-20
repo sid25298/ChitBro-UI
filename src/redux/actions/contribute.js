@@ -4,11 +4,12 @@ const contribute = (chitId) => {
         try {
             if (contract) {
 
+                console.log({account, chitId, chitIdType: typeof chitId})
                 await contract.methods.contribute(account, chitId).send({ from: account });
             }
         }
         catch (err) {
-            throw err;
+            console.log({err})
         }
     }
 }
