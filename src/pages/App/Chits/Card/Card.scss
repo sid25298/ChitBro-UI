@@ -2,27 +2,15 @@
 
 .card {
     border-radius: 8px;
-    box-shadow:
-            0 0px 0.9px rgba(0, 0, 0, 0.02),
-            0 0px 2.1px rgba(0, 0, 0, 0.028),
-            0 0px 3.9px rgba(0, 0, 0, 0.035),
-            0 0px 6.9px rgba(0, 0, 0, 0.042),
-            0 0px 13px rgba(0, 0, 0, 0.05),
-            0 0px 31px rgba(0, 0, 0, 0.07)
-;
+    box-shadow: 0 0px 0.9px rgba(0, 0, 0, 0.02), 0 0px 2.1px rgba(0, 0, 0, 0.028), 0 0px 3.9px rgba(0, 0, 0, 0.035), 0 0px 6.9px rgba(0, 0, 0, 0.042),
+        0 0px 13px rgba(0, 0, 0, 0.05), 0 0px 31px rgba(0, 0, 0, 0.07);
     background-color: #fff;
     margin-bottom: 16px;
     padding: 16px;
 
     &:hover {
-        box-shadow:
-                0 2.8px 2.2px rgba(0, 0, 0, 0.02),
-                0 6.7px 5.3px rgba(0, 0, 0, 0.028),
-                0 12.5px 10px rgba(0, 0, 0, 0.035),
-                0 22.3px 17.9px rgba(0, 0, 0, 0.042),
-                0 41.8px 33.4px rgba(0, 0, 0, 0.05),
-                0 100px 80px rgba(0, 0, 0, 0.07);
-
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+            0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
     }
     & > div:nth-child(1) {
         display: flex;
@@ -48,22 +36,23 @@
 }
 
 .join-btn {
-    background: linear-gradient(72deg,#4c249f 28%,#ec47c9 164%);
+    background: linear-gradient(72deg, #4c249f 28%, #ec47c9 164%);
     color: #ddd;
     box-shadow: none;
     border-radius: 4px;
+    border: none;
     padding: 8px 12px;
     cursor: pointer;
-    &:hover{
-      transform: scale(1.1);
-      transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.2s;
     }
 }
 
 .input-label {
-  display: flex;
-  &>svg{
-    align-self: center;
-    margin-right: 3px;
-  }
+    display: flex;
+    & > svg {
+        align-self: center;
+        margin-right: 3px;
+    }
 }
