@@ -37,7 +37,6 @@ const CreateChit = ({ setSearchText }) => {
             <div className="create-chit-container">
                 <input
                     type="text"
-                    className="text-input"
                     placeholder="Search Chit Name"
                     name="search"
                     {...form.register("search")}

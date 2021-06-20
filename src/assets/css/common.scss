@@ -3,3 +3,14 @@
     font-size: 0.75rem;
     color: #aaa;
 }
+
+.text-input {
+    border-radius: 10px;
+    border: 1px solid $colorPrimary;
+    width: 90%;
+    padding: 4px;
+
+    &:focus {
+        border: 2px solid $colorPrimary;
+    }
+}

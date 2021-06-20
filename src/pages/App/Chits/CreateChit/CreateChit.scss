@@ -1,7 +1,7 @@
 @import '../../../../assets/css/_variables.scss';
 .modal {
     width: 300px;
-    height: 400px;
+    height: 350px;
 }
 
 .create-chit-container {
@@ -16,7 +16,7 @@
     & input {
         width: 68%;
         padding: 5px;
-        &:focus{
+        &:focus {
             border: 2px solid $colorPrimary;
         }
     }
