@@ -7,6 +7,8 @@ import GradientCard from './GradientCard/GradientCard';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Dashboard.scss"
+import "../Chits/CreateChit/CreateChit.scss";
+
 import submitUnusedCollateral from '../../../redux/actions/submitUnusedCollateral';
 
 const Dashboard = () => {
@@ -55,10 +57,11 @@ const Dashboard = () => {
             {isFetching &&
                 <LineLoader />
             }
-            {/*Submit Unused Collateral button*/}
+            
+            <div className="create-chit-btn">
             <button onClick={() => {
                 dispatch(submitUnusedCollateral())
-            }}>Submit Collateral</button>
+            }}>Submit Collateral</button></div>
         </div>
     )
 }
