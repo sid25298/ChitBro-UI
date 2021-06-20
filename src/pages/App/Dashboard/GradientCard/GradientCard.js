@@ -18,7 +18,7 @@ const GradientCard = ({data: receivedData}) => {
                     To Pay, for {data?.name}
                 </div>
                 <div className="money">
-                    ₹{data?.installment && data.installment}
+                    ₹{data?.amount && data.duration && data.amount/data.duration}
                 </div>
                 <div>
 
