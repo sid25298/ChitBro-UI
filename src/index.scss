@@ -19,3 +19,7 @@ body {
     color: $colorOnPrimary;
     background-color: $colorBackground;
 }
+
+*:focus {
+    outline: none;
+}

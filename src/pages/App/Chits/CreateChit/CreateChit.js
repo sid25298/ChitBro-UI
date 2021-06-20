@@ -34,16 +34,19 @@ const CreateChit = ({ setSearchText }) => {
 
     return (
         <div className="create-chit">
-            <input
-                type="text"
-                className="text-input"
-                placeholder="Search Chit Name"
-                name="search"
-                {...form.register("search")}
-            />
-            <div className="create-chit-btn">
-                <button onClick={() => openModal()}>Create Chit</button>
+            <div className="create-chit-container">
+                <input
+                    type="text"
+                    className="text-input"
+                    placeholder="Search Chit Name"
+                    name="search"
+                    {...form.register("search")}
+                />
+                <div className="create-chit-btn">
+                    <button onClick={() => openModal()}>Create Chit</button>
+                </div>
             </div>
+
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
