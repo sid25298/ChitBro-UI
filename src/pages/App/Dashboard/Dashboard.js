@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import React, {useEffect} from 'react'
+import {useDispatch, useSelector} from 'react-redux';
 import getMyChits from '../../../redux/actions/getMyChits';
 import GradientCard from './GradientCard/GradientCard';
 import "./Dashboard.scss"
@@ -35,7 +35,7 @@ const Dashboard = () => {
         }
         return (
             <Slider {...settings}>
-                <div className="gradientCard-container">{myChits.map((c, i) => <GradientCard key={c.id} data={c} />)}</div>
+                {myChits.map((c, i) => <GradientCard key={c.id} data={c}/>)}
             </Slider>
         );
     }
@@ -49,9 +49,7 @@ const Dashboard = () => {
             <div className="subTitle">
                 Find some info here
             </div>
-            <div>
-                {renderPendingPayments()}
-            </div>
+            {renderPendingPayments()}
         </div>
     )
 }
