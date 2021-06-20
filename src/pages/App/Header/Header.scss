@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-between;
     background: $colorBackground;
+    z-index: 20;
     & > div {
         align-self: center;
     }

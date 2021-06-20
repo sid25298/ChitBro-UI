@@ -54,4 +54,22 @@
 
     }
   }
+  & .slick-slider {
+    z-index: 0;
+    margin-bottom: 30px;
+    & .slick-next {
+      margin-right: 8px !important;
+      &::before{
+        color: $colorPrimary !important;
+      }
+    }
+
+    & .slick-prev {
+      margin-left: 4px !important;
+      &::before{
+        color: $colorPrimary !important;
+      }
+    }
+  }
+
 }
