@@ -11,7 +11,8 @@ const transformGetAllChitsResponse = (payload) => {
         next_payment_date: obj.nextPaymentDate,
         participants: obj.participants,
         room_filled: obj.roomFilled,
-        time_period: obj.timePeriod
+        time_period: obj.timePeriod,
+        installment: obj.installment
     }))
 }
 
@@ -28,7 +29,8 @@ const transformGetMyChitsResponse = (payload) => {
         next_payment_date: obj.nextPaymentDate,
         participants: obj.participants,
         room_filled: obj.roomFilled,
-        time_period: obj.timePeriod
+        time_period: obj.timePeriod,
+        installment: obj.installment
     }))
 }
 
@@ -47,7 +49,7 @@ const transformCreateChitRequest = (account, payload) => {
         Date.parse(now),
         Date.parse(payload.nextPaymentDate),
         parseInt(payload.roomCapacity),
-        timePeriod,
+        parseInt(timePeriod),
         parseInt(payload.poolAmount),
         parseInt(payload.chitDuration)
     ];

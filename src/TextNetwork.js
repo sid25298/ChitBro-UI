@@ -1,5 +1,152 @@
-export const addressDeployed = "0xe54a97f322eFc567f571090C6ac199745E81dD61";
+export const addressDeployed = `0x465adf4c4BFbFb9cB340adFcd9565adEFf621C95`
 export const abiDeployed = [
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_walletId",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "chitId",
+                "type": "uint256"
+            }
+        ],
+        "name": "contribute",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_walletId",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "chitName",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "createdAt",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "nextPaymentDate",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "roomCapacity",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "timePeriod",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "poolAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "chitDuration",
+                "type": "uint256"
+            }
+        ],
+        "name": "createChit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_walletId",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "chitId",
+                "type": "uint256"
+            }
+        ],
+        "name": "joinChit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_modulus",
+                "type": "uint256"
+            }
+        ],
+        "name": "randMod",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "chitId",
+                "type": "uint256"
+            }
+        ],
+        "name": "releaseFunds",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_walletId",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "submitCollateralToChit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_walletId",
+                "type": "address"
+            }
+        ],
+        "name": "submitUnusedCollateral",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
     {
         "inputs": [
             {
@@ -70,79 +217,7 @@ export const abiDeployed = [
         "type": "function"
     },
     {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_walletId",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "chitId",
-                "type": "uint256"
-            }
-        ],
-        "name": "contribute",
-        "outputs": [
-
-        ],
-        "stateMutability": "payable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_walletId",
-                "type": "address"
-            },
-            {
-                "internalType": "string",
-                "name": "chitName",
-                "type": "string"
-            },
-            {
-                "internalType": "uint256",
-                "name": "createdAt",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "nextPaymentDate",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "roomCapacity",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "timePeriod",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "poolAmount",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "chitDuration",
-                "type": "uint256"
-            }
-        ],
-        "name": "createChit",
-        "outputs": [
-
-        ],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-
-        ],
+        "inputs": [],
         "name": "fundBalance",
         "outputs": [
             {
@@ -155,9 +230,7 @@ export const abiDeployed = [
         "type": "function"
     },
     {
-        "inputs": [
-
-        ],
+        "inputs": [],
         "name": "getAll",
         "outputs": [
             {
@@ -404,95 +477,6 @@ export const abiDeployed = [
             }
         ],
         "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_walletId",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "chitId",
-                "type": "uint256"
-            }
-        ],
-        "name": "joinChit",
-        "outputs": [
-
-        ],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_modulus",
-                "type": "uint256"
-            }
-        ],
-        "name": "randMod",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "chitId",
-                "type": "uint256"
-            }
-        ],
-        "name": "releaseFunds",
-        "outputs": [
-
-        ],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_walletId",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "amount",
-                "type": "uint256"
-            }
-        ],
-        "name": "submitCollateralToChit",
-        "outputs": [
-
-        ],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_walletId",
-                "type": "address"
-            }
-        ],
-        "name": "submitUnusedCollateral",
-        "outputs": [
-
-        ],
-        "stateMutability": "payable",
         "type": "function"
     },
     {
