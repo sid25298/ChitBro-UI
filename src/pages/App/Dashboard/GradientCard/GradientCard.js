@@ -24,6 +24,7 @@ const GradientCard = ({data: receivedData}) => {
                     Deadline: {data?.next_payment_date}
                 </div>
                 <div className="payNow-button-container">
+                    {/* TODO: Contribute goes here*/}
                     <button>
                         Pay Now
                     </button>
