@@ -14,9 +14,7 @@
     justify-content: space-between;
     background: $colorBackground;
     z-index: 20;
-    & > div {
-        align-self: center;
-    }
+    box-shadow: 0 4px 4px #0000001a;
     & > button {
         font-family: 'Titillium Web', sans-serif;
         align-self: center;

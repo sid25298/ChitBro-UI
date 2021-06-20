@@ -8,6 +8,7 @@
     height: 60px;
     display: flex;
     background-color: #43286e;
+    box-shadow: 0 -4px 4px #0000001a;
     & > button {
         font-family: 'Titillium Web', sans-serif;
         font-weight: bold;
@@ -16,17 +17,18 @@
         border: none;
         background-color: $colorPrimary;
         color: #9f82d7;
-        &:hover, &.selected {
-          color: $colorSecondary;
+        &:hover,
+        &.selected {
+            color: $colorSecondary;
         }
     }
 }
 
 .button-container {
-  display: flex;
-  flex-direction: column;
-  & > svg {
-    width: 100%;
-    font-size: 20px;
-  }
+    display: flex;
+    flex-direction: column;
+    & > svg {
+        width: 100%;
+        font-size: 20px;
+    }
 }
