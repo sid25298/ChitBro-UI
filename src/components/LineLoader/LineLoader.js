@@ -3,8 +3,8 @@ import './LineLoader.scss'
 
 const LineLoader = () => {
     return (
-        <div class="loader">
-            <div class="loader__element"></div>
+        <div className="loader">
+            <div className="loader__element"></div>
         </div>
     )
 }
