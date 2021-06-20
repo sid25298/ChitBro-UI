@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import DatePicker from 'react-datepicker'
 import createChit from '../../../../redux/actions/createChit';
 import "react-datepicker/dist/react-datepicker.css";
+import "./CreateChitModal.scss"
 
 export const CreateChitModal = ({ form, closeModal }) => {
 

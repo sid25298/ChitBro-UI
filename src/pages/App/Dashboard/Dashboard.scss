@@ -56,7 +56,7 @@
 
     & .slick-slider {
         z-index: 0;
-        margin: 0 24px 30px 24px;
+        //margin: 0 24px 30px 24px;
         & .slick-next {
             // margin-right: 8px !important;
             &::before {
@@ -71,4 +71,8 @@
             }
         }
     }
+}
+
+.gradientCard-container {
+    width: 100%;
 }

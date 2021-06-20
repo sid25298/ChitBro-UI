@@ -35,7 +35,7 @@ const Dashboard = () => {
         }
         return (
             <Slider {...settings}>
-                <div>{myChits.map((c, i) => <GradientCard key={c.id} data={c} />)}</div>
+                <div className="gradientCard-container">{myChits.map((c, i) => <GradientCard key={c.id} data={c} />)}</div>
             </Slider>
         );
     }

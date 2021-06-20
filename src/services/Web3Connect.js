@@ -2,10 +2,16 @@ import Web3 from "web3";
 import Web3Modal from "web3modal";
 import TokenService from '../services/TokenService';
 import { abiDeployed, addressDeployed } from '../TextNetwork';
+import WalletConnectProvider from "@walletconnect/web3-provider";
 
 
 const providerOptions = {
-
+    walletconnect: {
+        package: WalletConnectProvider,
+        options: {
+            infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
+        }
+    }
 };
 
 const web3Modal = new Web3Modal({
