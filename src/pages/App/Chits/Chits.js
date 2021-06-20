@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import Card from './Card/Card';
 import CreateChit from './CreateChit/CreateChit'
+import LineLoader from '../../../components/LineLoader/LineLoader';
 import getAllChits from '../../../redux/actions/getAllChits';
 import { FaRegSadTear } from 'react-icons/fa'
 import './Chits.scss'
@@ -10,7 +11,7 @@ import './Chits.scss'
 const Chits = () => {
 
     const dispatch = useDispatch();
-    const chits = useSelector(state => state.chits.data);
+    const { data: chits, isFetching } = useSelector(state => state.chits);
     const account = useSelector(state => state.contracts.account);
     const [searchText, setSearchText] = useState("");
 
@@ -39,6 +40,7 @@ const Chits = () => {
         <div className="page-wrap">
             <CreateChit setSearchText={setSearchText} />
             {renderChits()}
+            {isFetching && <LineLoader />}
         </div>
     )
 }

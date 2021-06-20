@@ -1,16 +1,17 @@
-import React, {useEffect} from 'react'
-import {useDispatch, useSelector} from 'react-redux';
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import Slider from "react-slick";
+import LineLoader from '../../../components/LineLoader/LineLoader';
 import getMyChits from '../../../redux/actions/getMyChits';
 import GradientCard from './GradientCard/GradientCard';
-import "./Dashboard.scss"
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./Dashboard.scss"
 
 const Dashboard = () => {
 
     const dispatch = useDispatch();
-    const myChits = useSelector(state => state.myChits.data);
+    const { data: myChits, isFetching } = useSelector(state => state.myChits);
     const account = useSelector(state => state.contracts.account);
     var settings = {
         dots: true,
@@ -35,14 +36,14 @@ const Dashboard = () => {
         }
         return (
             <Slider {...settings}>
-                {myChits.map((c, i) => <GradientCard key={c.id} data={c}/>)}
+                {myChits.map((c, i) => <GradientCard key={c.id} data={c} />)}
             </Slider>
         );
     }
 
     return (
         <div className="page-wrap dashboard-header">
-            {console.log({myChits})}
+            {console.log({ myChits })}
             <div className="title">
                 Dashboard
             </div>
@@ -50,6 +51,9 @@ const Dashboard = () => {
                 Find some info here
             </div>
             {renderPendingPayments()}
+            {isFetching &&
+                <LineLoader />
+            }
         </div>
     )
 }
