@@ -10,13 +10,14 @@
     font-size: smaller;
   }
 
-  & > .gradientCard {
+  & .gradientCard {
     margin: 12px 0;
     height: 150px;
     border-radius: 10px;
+    width: 87% !important;
     background: linear-gradient(72deg,#4c249f 28%,#ec47c9 164%);
     color: white;
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     padding: 25px;
     align-items: center;
@@ -34,7 +35,7 @@
 
     & .payNow-button-container {
       padding: 10px 0;
-      & > button {
+      & button {
         background: $colorSecondary;
         color: $colorPrimary;
         border: none;
