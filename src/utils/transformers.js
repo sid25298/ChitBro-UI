@@ -32,6 +32,13 @@ const transformGetMyChitsResponse = (payload) => {
     }))
 }
 
+const transformGetCollateralResponse = (payload) => {
+    return {
+        used_collateral: payload.usedCollateral,
+        unused_collateral: payload.unusedCollateral,
+    }
+}
+
 const transformCreateChitRequest = (account, payload) => {
     const now = new Date()
     const timePeriod = Math.abs(now - payload.nextPaymentDate) / 1000
@@ -50,5 +57,6 @@ const transformCreateChitRequest = (account, payload) => {
 export default {
     transformGetAllChitsResponse,
     transformGetMyChitsResponse,
-    transformCreateChitRequest
+    transformCreateChitRequest,
+    transformGetCollateralResponse
 }
