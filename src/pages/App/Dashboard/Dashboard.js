@@ -7,13 +7,16 @@ const Dashboard = () => {
 
     const dispatch = useDispatch();
     const myChits = useSelector(state => state.myChits.data);
+    const account = useSelector(state => state.contracts.account);
 
     useEffect(() => {
         const handleGetMyChits = async () => {
             await dispatch(getMyChits());
         }
-        handleGetMyChits();
-    }, [dispatch])
+        if (account) {
+            handleGetMyChits();
+        }
+    }, [dispatch, account])
 
     return (
         <div className="page-wrap">
