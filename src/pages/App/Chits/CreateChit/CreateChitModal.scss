@@ -1,0 +1,31 @@
+@import '../../../../assets/css/_variables.scss';
+
+.modal {
+  overflow: hidden;
+  & .modal-single-input-container {
+    padding: 5px 0;
+  }
+  & input {
+    outline: none;
+    border: 1px solid $colorPrimary;
+  }
+  & .create-chit-label {
+    margin-bottom: 0 !important;
+
+  }
+}
+
+.ReactModal__Content{
+  background-color: #f7edee !important;
+}
+
+.create-chit-btn {
+  & button {
+    word-break: keep-all;
+  }
+  & .btn-cancel {
+    background: transparent;
+    border: 1px solid $colorPrimary;
+    color: $colorPrimary;
+  }
+}

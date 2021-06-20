@@ -13,31 +13,39 @@
         border-radius: 10px;
         border: 1px solid $colorPrimary;
     }
-    & .create-chit-btn {
-        & > button {
-            font-family: 'Titillium Web', sans-serif;
-            align-self: center;
-            border-radius: 20px;
-            padding: 5px 20px;
-            height: 32px;
-            background: $colorPrimary;
+    & input {
+        width: 68%;
+        padding: 5px;
+        &:focus{
+            border: 2px solid $colorPrimary;
+        }
+    }
+}
+
+.create-chit-btn {
+    & > button {
+        font-family: 'Titillium Web', sans-serif;
+        align-self: center;
+        border-radius: 20px;
+        padding: 5px 20px;
+        height: 32px;
+        background: $colorPrimary;
+        border: none;
+        color: $colorSecondary;
+        word-break: break-word;
+        transition: transform 0.2s ease-in-out;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        &:active {
+            outline: none;
             border: none;
-            color: $colorSecondary;
-            word-break: break-word;
-            transition: transform 0.2s ease-in-out;
-            &:hover {
-                cursor: pointer;
-                transform: scale(1.05);
-            }
+        }
 
-            &:active {
-                outline: none;
-                border: none;
-            }
-
-            &:focus {
-                outline: 0;
-            }
+        &:focus {
+            outline: 0;
         }
     }
     & input {

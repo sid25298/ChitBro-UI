@@ -5,6 +5,7 @@ import DatePicker from 'react-datepicker'
 import createChit from '../../../../redux/actions/createChit';
 import "react-datepicker/dist/react-datepicker.css";
 import "./CreateChitModal.scss"
+import '../CreateChit/CreateChit.scss'
 
 export const CreateChitModal = ({ form, closeModal }) => {
 
@@ -18,9 +19,9 @@ export const CreateChitModal = ({ form, closeModal }) => {
 
     return (
         <div className="modal">
-            <div>
-                <div>
-                    <label className="input-label">Chit Name</label>
+            <div className="modal-inputs-container">
+                <div className="modal-single-input-container">
+                    <label className="input-label create-chit-label">Chit Name</label>
                     <input
                         type="text"
                         className="text-input"
@@ -29,7 +30,7 @@ export const CreateChitModal = ({ form, closeModal }) => {
                     />
                 </div>
 
-                <div>
+                <div className="modal-single-input-container">
                     <label className="input-label">Next Payment Date</label>
                     <Controller
                         control={form.control}
@@ -43,7 +44,7 @@ export const CreateChitModal = ({ form, closeModal }) => {
                         )}
                     />
                 </div>
-                <div>
+                <div className="modal-single-input-container">
                     <label className="input-label">Room Capacity</label>
                     <input
                         type="number"
@@ -52,7 +53,7 @@ export const CreateChitModal = ({ form, closeModal }) => {
                         {...form.register("roomCapacity")}
                     />
                 </div>
-                <div>
+                <div className="modal-single-input-container">
                     <label className="input-label">Time Period</label>
                     <input
                         type="number"
@@ -61,7 +62,7 @@ export const CreateChitModal = ({ form, closeModal }) => {
                         {...form.register("timePeriod")}
                     />
                 </div>
-                <div>
+                <div className="modal-single-input-container">
                     <label className="input-label">Pool Amount</label>
                     <input
                         type="number"
@@ -70,7 +71,7 @@ export const CreateChitModal = ({ form, closeModal }) => {
                         {...form.register("poolAmount")}
                     />
                 </div>
-                <div>
+                <div className="modal-single-input-container">
                     <label className="input-label">Chit Duration</label>
                     <input
                         type="number"
@@ -80,9 +81,9 @@ export const CreateChitModal = ({ form, closeModal }) => {
                     />
                 </div>
             </div>
-            <div>
-                <button onClick={handleSave}>Save</button>
-                <button onClick={closeModal}>Cancel</button>
+            <div className="modal-buttons-container create-chit-btn space-buttons">
+                <button className="" onClick={handleSave}>Save</button>
+                <button className="btn-cancel" onClick={closeModal}>Cancel</button>
             </div>
         </div>
     )
