@@ -40,7 +40,7 @@ const transformCreateChitRequest = (account, payload) => {
         Date.parse(now),
         Date.parse(payload.nextPaymentDate),
         parseInt(payload.roomCapacity),
-        timePeriod,
+        parseInt(timePeriod),
         parseInt(payload.poolAmount),
         parseInt(payload.chitDuration)
     ];
