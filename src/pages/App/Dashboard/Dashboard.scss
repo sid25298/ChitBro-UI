@@ -61,6 +61,7 @@
             // margin-right: 8px !important;
             &::before {
                 color: $colorPrimary !important;
+                display: none;
             }
         }
 
@@ -68,6 +69,7 @@
             // margin-left: 4px !important;
             &::before {
                 color: $colorPrimary !important;
+                display: none;
             }
         }
     }
