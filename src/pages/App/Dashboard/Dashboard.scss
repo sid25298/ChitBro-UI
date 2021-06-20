@@ -1,0 +1,56 @@
+@import '../../../assets/css/_variables.scss';
+
+.dashboard-header {
+  color: $colorPrimary;
+  & > .title {
+    font-size: larger;
+    font-weight: bold;
+  }
+  & > .subTitle {
+    font-size: smaller;
+  }
+
+  & > .gradientCard {
+    margin: 12px 0;
+    height: 150px;
+    border-radius: 10px;
+    background: linear-gradient(72deg,#4c249f 28%,#ec47c9 164%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    align-items: center;
+    & .money {
+      font-size: xx-large;
+      font-weight: bolder;
+    }
+    & .time {
+      font-size: x-small;
+    }
+
+    & .image-container {
+      margin-right: 10%;
+    }
+
+    & .payNow-button-container {
+      padding: 10px 0;
+      & > button {
+        background: $colorSecondary;
+        color: $colorPrimary;
+        border: none;
+        box-shadow: none;
+        padding: 6px 12px;
+        border-radius: 10px;
+        font-family: 'Titillium Web', sans-serif;
+        &:hover{
+          border: none;
+          outline: none;
+        }
+        &:focus{
+          outline: none;
+        }
+      }
+
+    }
+  }
+}
