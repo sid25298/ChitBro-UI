@@ -33,12 +33,14 @@ const transformGetMyChitsResponse = (payload) => {
 }
 
 const transformCreateChitRequest = (account, payload) => {
+    const now = new Date()
+    const timePeriod = Math.abs(now - payload.nextPaymentDate) / 1000
     return [account,
         payload.chitName,
-        Date.parse(new Date()),
+        Date.parse(now),
         Date.parse(payload.nextPaymentDate),
         parseInt(payload.roomCapacity),
-        parseInt(payload.timePeriod),
+        timePeriod,
         parseInt(payload.poolAmount),
         parseInt(payload.chitDuration)
     ];

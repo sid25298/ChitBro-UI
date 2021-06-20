@@ -54,15 +54,6 @@ export const CreateChitModal = ({ form, closeModal }) => {
                     />
                 </div>
                 <div className="modal-single-input-container">
-                    <label className="input-label">Time Period</label>
-                    <input
-                        type="number"
-                        className="text-input"
-                        name="timePeriod"
-                        {...form.register("timePeriod")}
-                    />
-                </div>
-                <div className="modal-single-input-container">
                     <label className="input-label">Pool Amount</label>
                     <input
                         type="number"
