@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+## ChitBro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A decentralised Chit-Fund app that cannot involve in fraud even if it wants to.
 
-## Available Scripts
+### Tech Stack:
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Frontend - React, Redux, SCSS
+* Blockchain - Polygon(previously Matic)
+* Smart Contracts - Solidity
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Smart Contract code deployed on Matic Mumbai
+  Testnet [0x9a9f80E47e8D67D526e21A09aF1e385b0f7F88be](https://explorer-mumbai.maticvigil.com/address/0x9a9f80E47e8D67D526e21A09aF1e385b0f7F88be)
+* Frontend written in React deployed on Firebase - [chitbro.web.app](https://chitbro.web.app)
 
-### `npm run build` fails to minify
+### Local
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* To start frontend connected to Matic test net, run `npm start`
+* Smart Contract available on `contracts/ChitManager.sol` folder of this project
+* ABI for the contract is at `src/TextNetwork.js`
+
+### Uniqueness from other similar projects
+
+* There are similar solutions that implement ChitFund on a blockchain, but they use blockchain only for securing and not
+  crypto assets. For example: [chitmonks](chitmonks.com)
+* DeFi platforms like [pooltogether](pooltogether.com),[aave](aave.com) are DeFi borrowing, lending, pooling protocols
+  whereas Chit Funds are an Indian concept which is being democratized for the entire world through ChitBro.
+
+Read more about the project and more context about Chit
+Funds [here](https://www.notion.so/DeFi-Chit-e364c2cd701745afa924e117d4e3bdcd). The Presentation used during the
+hackathon [here](https://cdn.discordapp.com/attachments/855532921867468851/856614941720838184/ChitBro_Presentation.pdf).
+> Note: Web UI Design inspired from [pooltogether](app.pooltogether.com)
